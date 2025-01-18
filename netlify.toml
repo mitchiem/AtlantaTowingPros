@@ -1,0 +1,23 @@
+# Date (YYYY-mm-dd) - username: summary notes on the change / update
+# 2025-01-12 - agpldev
+#  - removed redundant / duplicate headers section for sitemap.xml
+#  - The catc-all headers section for = "*.xml" will handle this
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[redirects]]
+  from = "/*.html"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
