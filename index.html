@@ -238,6 +238,42 @@
             .service-area th {
                 background-color: #f2f2f2;
             }
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-image {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-heading {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            .hero-heading h1 {
+                margin: 0 10px;
+            }
+            .emoji {
+                font-size: 2.5rem;
+            }
+            .ratings {
+                margin-bottom: 10px;
+            }
+            .features {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+            .features li {
+                margin-bottom: 5px;
+            }
         </style>
     </head>
     <body>
@@ -252,20 +288,28 @@
         </header>
         <main>
             <section class="hero">
-                <img src="https://i.imgur.com/B3qWFbJ.png" alt="Tow truck driver towing a van" style="max-width: 100%; height: auto; margin-bottom: 20px;">
-                <span style="font-size: 2.5rem;">🚨</span><h1 style="display: inline-block;"> 24/7 Emergency Towing <span style="display:block;">in Atlanta</span></h1><span style="font-size: 2.5rem;">🚨</span>
-                <p>
+              <div class="hero-content">
+                <img src="https://i.imgur.com/B3qWFbJ.png" alt="Tow truck driver towing a van" class="hero-image">
+                <div class="hero-text">
+                  <div class="hero-heading">
+                    <span class="emoji">🚨</span>
+                    <h1>24/7 Emergency Towing <span>in Atlanta</span></h1>
+                    <span class="emoji">🚨</span>
+                  </div>
+                  <p>
                     Need fast, reliable towing? Atlanta Towing Pros has you covered! From lockouts to heavy-duty towing, we serve metro Atlanta with affordable, professional service—day or night.
-                </p>
-                 <p>
-                    ⭐️⭐️⭐️⭐️⭐️  Rated 5 Stars by Atlanta Customers
-                </p>
-                <p>
-                    ✅ 24/7 Towing<br>
-                    ✅ Flatbed & Heavy-Duty<br>
-                    ✅ Roadside Assistance
-                </p>
-                <a href="tel:678-470-9220" class="call-button">Call Now For Immediate Help</a>
+                  </p>
+                  <p class="ratings">
+                    ⭐️⭐️⭐️⭐️⭐️ Rated 5 Stars by Atlanta Customers
+                  </p>
+                  <ul class="features">
+                    <li>✅ 24/7 Towing</li>
+                    <li>✅ Flatbed & Heavy-Duty</li>
+                    <li>✅ Roadside Assistance</li>
+                  </ul>
+                  <a href="tel:678-470-9220" class="call-button">Call Now For Immediate Help</a>
+                </div>
+              </div>
             </section>
             <section class="services">
                 <h2>Our Services</h2>
