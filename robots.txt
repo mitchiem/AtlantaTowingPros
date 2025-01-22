@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://atlantatowingpros.com/sitemap.xml

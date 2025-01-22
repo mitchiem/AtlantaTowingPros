@@ -1,23 +1,43 @@
 # Date (YYYY-mm-dd) - username: summary notes on the change / update
-# 2025-01-12 - agpldev
-#  - removed redundant / duplicate headers section for sitemap.xml
-#  - The catc-all headers section for = "*.xml" will handle this
+    # 2025-01-12 - agpldev
+    #  - removed redundant / duplicate headers section for sitemap.xml
+    #  - The catc-all headers section for = "*.xml" will handle this
 
-[build]
-  command = "npm run build"
-  publish = "dist"
+    [build]
+      command = "npm run build"
+      publish = "dist"
 
-[[headers]]
-  for = "/*.xml"
-  [headers.values]
-    Content-Type = "application/xml"
+    [[headers]]
+      for = "/*.xml"
+      [headers.values]
+        Content-Type = "application/xml"
 
-[[redirects]]
-  from = "/*.html"
-  to = "/index.html"
-  status = 200
+    [[redirects]]
+      from = "/*.html"
+      to = "/index.html"
+      status = 200
+    
+    [[redirects]]
+      from = "https://www.atlantatowingpros.com/*"
+      to = "https://atlantatowingpros.com/:splat"
+      status = 301
+    
+    [[redirects]]
+      from = "https://atlantatowingpros.com/home-2323"
+      to = "https://atlantatowingpros.com/"
+      status = 301
+    
+    [[redirects]]
+      from = "http://atlantatowingpros.com/*"
+      to = "https://atlantatowingpros.com/:splat"
+      status = 301
+    
+    [[redirects]]
+      from = "http://www.atlantatowingpros.com/*"
+      to = "https://atlantatowingpros.com/:splat"
+      status = 301
 
-[[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Content-Type = "application/xml"
+    [[headers]]
+      for = "/sitemap.xml"
+      [headers.values]
+        Content-Type = "application/xml"
